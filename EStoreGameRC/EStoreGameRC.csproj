@@ -130,10 +130,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AdditFeatures.cs" />
+    <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\GameLanguage.cs" />
+    <Compile Include="Models\GamePublisher.cs" />
     <Compile Include="Models\GameType.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Platform.cs" />
     <Compile Include="Models\PlatformType.cs" />
+    <Compile Include="Models\SystemRequir.cs" />
+    <Compile Include="Models\Video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -12,10 +12,10 @@ namespace EStoreGameRC.Models
     {
         [Key] //Klucz główny tabeli
         public int IDGameType { get; set; }
-        //[ForeignKey("Game")] //Klucz obcy
+        [ForeignKey("Game")] //Klucz obcy
         public int GameID { get; set; }
         public string NameGameType { get; set; }
-        //Będziemy wiedzieć, które gry przynależą do tego GameType
-        public virtual Game Games { get; set; }
+        //Do każdego gatunku możemy przypisać wiele gier
+        public virtual ICollection<Game> Games { get; set; }
     }
 }

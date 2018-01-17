@@ -10,8 +10,11 @@ namespace EStoreGameRC.Models
     [Table("Platform")]
     public class Platform
     {
+
         [Key]
         public int IDPlatform { get; set; }
+        [ForeignKey("Game")]
+        public int GameID { get; set; }
         public string NamePlatform { get; set; }
         //Będziemy wiedzieć, które gry przynależą do tej Platformy
         public virtual Game Games { get; set; }

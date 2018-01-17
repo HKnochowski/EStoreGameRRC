@@ -12,6 +12,8 @@ namespace EStoreGameRC.Models
     {
             [Key]
             public int IDPlatformType { get; set; }
+            [ForeignKey("Platform")]
+            public int IDGameType { get; set; }
             public string NamePlatformType { get; set; }
         // Będziemy wiedzieć, które Platformy przynależą do danego typu
             public virtual Platform Platforms { get; set; }
