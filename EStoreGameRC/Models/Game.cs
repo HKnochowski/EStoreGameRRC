@@ -14,7 +14,9 @@ namespace EStoreGameRC.Models
         public int GameID { get; set; }
         public string GameName { get; set; }
         public string GameDescription { get; set; }
-        // do każdego samochodu możemy przypisać wiele komenatrzy
+        // do każdej gry możemy przypisać wiele gatunków gier
         public virtual ICollection<GameType> GamesTypesCollect { get; set; }
+        // do każdej gry możemy przypisać wiele platform
+        public virtual ICollection<Platform> Platforms { get; set; }
     }
 }

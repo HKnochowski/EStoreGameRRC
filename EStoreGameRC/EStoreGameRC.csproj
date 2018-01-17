@@ -132,6 +132,8 @@
     </Compile>
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameType.cs" />
+    <Compile Include="Models\Platform.cs" />
+    <Compile Include="Models\PlatformType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
