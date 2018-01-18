@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -10,9 +11,17 @@ namespace EStoreGameRC.Models
     [Table("Gallery")]
     public class Gallery
     {
-        [Key]
-        public int IDGallery { get; set; }
+            [Key]
+            [ForeignKey("Game")]
+        public int GalleryID { get; set; }
+            [Required(ErrorMessage = "Nazwa Galerii jest obowiązkowa")]
+            [DisplayName("Galeria")]
+            [StringLength(100)]
+            [Column(TypeName = "Nazwa Galerii")]
         public string NameGallery { get; set; }
+            [DisplayName("Data dodania galerii")]
+            [DataType(DataType.Date)]
+            [DisplayFormat(DataFormatString = "0:yyyy-MM-dd")]
         public DateTime DateAddGallery { get; set; }
 
         //jedna galeria może mieć jedną grę
