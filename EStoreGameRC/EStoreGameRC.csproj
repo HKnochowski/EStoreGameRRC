@@ -131,6 +131,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdditFeatures.cs" />
+    <Compile Include="Models\Addresses.cs" />
+    <Compile Include="Models\Contacts.cs" />
+    <Compile Include="Models\Employers.cs" />
     <Compile Include="Models\Gallery.cs" />
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\GameLanguage.cs" />
