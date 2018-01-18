@@ -117,16 +117,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Games\Create.cshtml" />
-    <Content Include="Views\Games\Delete.cshtml" />
-    <Content Include="Views\Games\Details.cshtml" />
-    <Content Include="Views\Games\Edit.cshtml" />
-    <Content Include="Views\Games\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\GamesController.cs" />
-    <Compile Include="GameContext.cs" />
+    <Compile Include="Concrete\EStoreDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
