@@ -19,6 +19,8 @@ namespace EStoreGameRC.Models
             [DisplayName("Czy gra została sprzedana/kupiona")]
         public bool OrToSale { get; set; }
 
+            [ForeignKey("Game")]
+        public int IDGame { get; set; }
             [ForeignKey("Baskets")]
         public int IDBasket { get; set; }
             [ForeignKey("Client")]

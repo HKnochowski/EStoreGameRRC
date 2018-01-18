@@ -11,10 +11,10 @@ namespace EStoreGameRC.Models
     [Table("Client")]
     public class Client
     {
-        public Client()
+       /* public Client()
         {
             this.LibraryGames = new HashSet<Game>();
-        }
+        } */
 
             [Key]
         public int ClientID { get; set; }
@@ -41,11 +41,14 @@ namespace EStoreGameRC.Models
 
             [ForeignKey("State")]
         public int IDState { get; set; }
+            [ForeignKey("WishLists")]
+        public int IDWishList { get; set; }
 
         public virtual Basket Basket { get; set; }
         public virtual SalesInvoice SalesInvoice { get; set; }
         //Biblioteka gier klienta
         public virtual ICollection<Copie> Copies { get; set; }
         public virtual State State { get; set; }
+        public virtual WishList WishLists { get; set; }
     }
 }

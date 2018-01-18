@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -10,11 +11,14 @@ namespace EStoreGameRC.Models
     [Table("GameLanguage")]
     public class GameLanguage
     {
-        [Key]
+            [Key]
         public int IDGameLanguage { get; set; }
-        [ForeignKey("Game")]
-        public int GameID { get; set; }
+            [Required(ErrorMessage ="Nazwa języka jest wymagana")]
+            [DisplayName("Nazwa języka")]
+            [StringLength(50)]
+            [Column(TypeName ="Język gry")]
         public string NameLanguage { get; set; }
+
         // Do każdego języka możemy przypisać wiele gier
         public virtual ICollection<Game> Games { get; set; }
     }

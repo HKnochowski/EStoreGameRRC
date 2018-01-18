@@ -4,20 +4,24 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace EStoreGameRC.Models
 {
-    [Table("Platform")]
+    [Table("Platforms")]
     public class Platform
     {
 
-        [Key]
-        public int IDPlatform { get; set; }
-        [ForeignKey("Game")]
-        public int GameID { get; set; }
+            [Key]
+        public int PlatformID { get; set; }
+            [Required(ErrorMessage ="Nazwa platformy jest wymagana")]
+            [DisplayName("Nazwa Platformy")]
+            [StringLength(50)]
+            [Column(TypeName ="Nazwa Platformy")]
         public string NamePlatform { get; set; }
-        //Będziemy wiedzieć, które gry przynależą do tej Platformy
-        public virtual Game Games { get; set; }
+
+
+        public virtual ICollection<Game> Games { get; set; }
         // do każdej platformy możemy przypisać wiele typów
         public virtual ICollection<PlatformType> PlatformsTypes { get; set; }
     }
