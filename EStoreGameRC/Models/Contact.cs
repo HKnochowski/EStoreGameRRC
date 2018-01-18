@@ -8,14 +8,17 @@ using System.Web;
 namespace EStoreGameRC.Models
 {
     [Table("Contacts")]
-    public class Contacts
+    public class Contact
     {
         [Key]
         public int ContactID { get; set; }
+        [ForeignKey("Employer")]
+        public int EmployerID { get; set; }
         public string PhoneNumber1 { get; set; }
         public string PhoneNumber2 { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }
-        public virtual Employers Employers { get; set; }
+
+        public virtual Employer Employers { get; set; }
     }
 }

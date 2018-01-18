@@ -9,13 +9,13 @@ using System.Web;
 namespace EStoreGameRC.Models
 {
     [Table("Employers")]
-    public class Employers
+    public class Employer
     {
         [Key]
         public int EmployerID { get; set; }
         [ForeignKey("Address")]
         public int AddressID { get; set; }
-        [ForeignKey("Contacts")]
+        [ForeignKey("Contact")]
         public int ContactID { get; set; }
         public int Login { get; set; } //int bo w loginie może być cyfra itp itd
         public int Password { get; set; }
@@ -26,6 +26,9 @@ namespace EStoreGameRC.Models
         public DateTime DismissDate { get; set; }
        
         //Poziom uprawnień? Raczej bym z tego zrezygnował, więcej będzie kombinowania z kodem
+
+        public virtual Address Address { get; set; }
+        public virtual Contact Contact { get; set; }
 
 
 

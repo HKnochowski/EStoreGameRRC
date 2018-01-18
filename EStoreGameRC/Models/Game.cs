@@ -40,5 +40,9 @@ namespace EStoreGameRC.Models
         public virtual GamePublisher GamePublisher { get; set; }
         //gra może mieć jedno wymaganie
         public virtual SystemRequir SystemRequir { get; set; }
+
+        public virtual ICollection<Copie> Copies { get; set; }
+        public virtual ICollection<WishList> WishesLists { get; set; }
+        public virtual ICollection<Client> Clients { get; set; }
     }
 }
