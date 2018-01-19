@@ -21,7 +21,7 @@ namespace EStoreGameRC.Models
             [Required(ErrorMessage = "Wymagane jest podanie hasła")]
             [DisplayName("Hasło")]
             [StringLength(20)]
-        public int EmployerPassword { get; set; }
+        public string EmployerPassword { get; set; }
             [Required(ErrorMessage = "Wymagane jest podanie imienia")]
             [DisplayName("Imię")]
             [StringLength(50)]
