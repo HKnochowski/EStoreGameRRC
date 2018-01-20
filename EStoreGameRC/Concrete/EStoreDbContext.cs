@@ -1,6 +1,8 @@
 namespace EStoreGameRC.Concrete
 {
     using EStoreGameRC.Models;
+    using System.Collections.Generic;
+    using System.Web;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -13,6 +15,7 @@ namespace EStoreGameRC.Concrete
         }
 
         public DbSet<Address> Addresses { get; set; }
+
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Contact> Contacts { get; set; }
@@ -30,7 +33,6 @@ namespace EStoreGameRC.Concrete
         public DbSet<State> SystemRequirs { get; set; }
         public DbSet<Video> Videos { get; set; }
         public DbSet<WishList> WishesLists { get; set; }
-
 
     }
 
