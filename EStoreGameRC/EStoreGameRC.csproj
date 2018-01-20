@@ -131,9 +131,15 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
+    <Content Include="Views\Games\Create.cshtml" />
+    <Content Include="Views\Games\Delete.cshtml" />
+    <Content Include="Views\Games\Details.cshtml" />
+    <Content Include="Views\Games\Edit.cshtml" />
+    <Content Include="Views\Games\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Concrete\EStoreDbContext.cs" />
     <Compile Include="Controllers\AddressesController.cs" />
@@ -142,6 +148,10 @@
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\CopiesController.cs" />
     <Compile Include="Controllers\EmployersController.cs" />
+=======
+    <Compile Include="Controllers\GamesController.cs" />
+    <Compile Include="GameContext.cs" />
+>>>>>>> parent of f0f4f63... Update 1.6 HK
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
